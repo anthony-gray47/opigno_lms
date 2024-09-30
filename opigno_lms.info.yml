@@ -1,7 +1,6 @@
 name: Opigno LMS
 type: profile
 description: "Install Opigno with commonly used features pre-configured."
-version: "3.1.0"
 core_version_requirement: ^9 || ^10
 distribution:
   name: "Opigno LMS"
@@ -14,6 +13,7 @@ dependencies:
   - calendar
   - calendar_datetime
   - ckeditor
+  - ckeditor5
   - ckeditor_bgimage
   - color
   - comment
@@ -34,6 +34,7 @@ dependencies:
   - entity_embed
   - entity_print
   - entity_reference_revisions
+  - exif_orientation
   - field
   - field_group
   - field_ui
@@ -51,6 +52,7 @@ dependencies:
   - media
   - media_entity_browser
   - menu_ui
+  - message
   - mimemail
   - node
   - simple_gmap
@@ -74,6 +76,7 @@ dependencies:
   - opigno_messaging
   - opigno_module
   - opigno_module_group
+  - opigno_module_restart
   - opigno_moxtra
   - opigno_notification
   - opigno_scorm
@@ -98,8 +101,6 @@ dependencies:
   - popup_field_group
   - private_message
   - queue_mail
-  - quickedit
-  - rdf
   - role_delegation
   - search_api
   - serialization
@@ -120,5 +121,4 @@ dependencies:
   - views_ui
   - forum
 themes:
-  - seven
   - aristotle

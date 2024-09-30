@@ -8,9 +8,6 @@ blocks:
   opigno_user_connections_block:
     available: '1'
     mandatory: 0
-  'views_block:comments_recent-block_1':
-    available: '1'
-    mandatory: 0
   'views_block:latest_active_trainings-block':
     available: '1'
     mandatory: 0
@@ -18,9 +15,6 @@ blocks:
     available: '1'
     mandatory: 0
   'views_block:opigno_group_members-block_pending':
-    available: '1'
-    mandatory: 0
-  'views_block:opigno_notifications-block_unread_dashboard':
     available: '1'
     mandatory: 0
   'views_block:opigno_score_modules-dashboard_notavaluated_modules':
@@ -263,6 +257,9 @@ blocks:
   'views_exposed_filter_block:opigno_training_catalog-training_catalogue':
     available: 0
     mandatory: 0
+  'views_block:comments_recent-block_1':
+    available: 0
+    mandatory: 0
   'views_block:content_recent-block_1':
     available: 0
     mandatory: 0
@@ -273,6 +270,9 @@ blocks:
     available: 0
     mandatory: 0
   'views_block:opigno_notifications-block_unread':
+    available: 0
+    mandatory: 0
+  'views_block:opigno_notifications-block_unread_dashboard':
     available: 0
     mandatory: 0
   'views_block:opigno_social_posts-posts':

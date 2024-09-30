@@ -13,7 +13,7 @@ use Drupal\Core\Render\Markup;
  * Implements hook_preprocess_template().
  */
 function opigno_lms_preprocess_install_page(&$variables) {
-  $variables['site_version'] = '3.1.0';
+  $variables['site_version'] = '3.2.7';
 }
 
 /**
@@ -45,7 +45,6 @@ function opigno_lms_install_tasks(&$install_state) {
 function opigno_lms_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
   $messenger = \Drupal::messenger();
 
-
   // Check if Tincan PHP library is installed.
   $has_library = class_exists('TinCan\Version');
   if (!$has_library) {
@@ -59,33 +58,24 @@ function opigno_lms_form_install_configure_form_alter(&$form, FormStateInterface
     $password = $config->get('opigno_tincan_api_password');
 
     if (empty($endpoint) || empty($username) || empty($password)) {
+      $link_settings = Link::createFromRoute('settings page', 'opigno_tincan_api.settings_form');
+      $url_settings = $link_settings->toString();
       $messenger->addWarning(t(
         'Please configure the LRS connection in the @setting_page.',
         [
-          '@setting_page' => Link::createFromRoute('settings page', 'opigno_tincan_api.settings_form')
-            ->toString()
+          '@setting_page' => $url_settings,
         ]
       ));
       return;
     }
   }
-
-  // Send message for install pdf.js library if it's not installed.
-  $pdf_js_library = file_exists('libraries/pdf.js/build/pdf.js') && file_exists('libraries/pdf.js/build/pdf.worker.js');
-  if (!$pdf_js_library) {
-    $message = t('pdf.js library is not installed. Please install it from <a href="@library">here</a> and place in <em>libraries/</em> folder', ['@library' => 'http://mozilla.github.io/pdf.js/getting_started/']);
-    $messenger->addWarning(Markup::create($message));
-  }
-
 }
 
 /**
- * Implements opigno_lms_check_opigno_lms_updates().
- *
  * Check if new Opigno LMS release is available.
  *
- * Return TRUE or FALSE.
- *
+ * @return bool
+ *   TRUE if new release is available, FALSE otherwise.
  */
 function opigno_lms_check_opigno_lms_updates() {
   // Get all available updates.
@@ -103,12 +93,10 @@ function opigno_lms_check_opigno_lms_updates() {
 }
 
 /**
- * Implements opigno_lms_get_current_opigno_lms_release().
- *
  * Get current Opigno LMS release version.
  *
- * Return string with current release version or FALSE.
- *
+ * @return string|bool
+ *   The current Opigno LMS release version or FALSE if not Opigno LMS profile.
  */
 function opigno_lms_get_current_opigno_lms_release() {
   $profile = \Drupal::installProfile();
@@ -127,4 +115,3 @@ function opigno_lms_get_current_opigno_lms_release() {
 function opigno_lms_clear_cache() {
   drupal_flush_all_caches();
 }
-
