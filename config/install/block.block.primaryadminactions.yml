@@ -1,12 +1,14 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
-    - seven
-id: seven_local_actions
-theme: seven
+    - aristotle
+id: primaryadminactions
+theme: aristotle
 region: content
-weight: -10
+weight: -12
 provider: null
 plugin: local_actions_block
 settings:
@@ -14,4 +16,9 @@ settings:
   label: 'Primary admin actions'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /catalogue
+    negate: true
+    context_mapping: {  }

@@ -2,33 +2,30 @@ langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.opigno-admin
+    - system.menu.footer
   module:
     - system
-    - user
   theme:
-    - platon
-id: opignoadmin
-theme: platon
-region: admin_opigno
-weight: 0
+    - aristotle
+id: footer
+theme: aristotle
+region: footer
+weight: -14
 provider: null
-plugin: 'system_menu_block:opigno-admin'
+plugin: 'system_menu_block:footer'
 settings:
-  id: 'system_menu_block:opigno-admin'
-  label: 'Opigno admin'
+  id: 'system_menu_block:footer'
+  label: Footer
   provider: system
   label_display: '0'
   level: 1
   depth: 0
+  expand_all_items: false
 visibility:
   user_role:
     id: user_role
     roles:
       authenticated: authenticated
-      user_manager: user_manager
-      content_manager: content_manager
-      administrator: administrator
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
