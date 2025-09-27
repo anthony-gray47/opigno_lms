@@ -122,9 +122,6 @@
             "drupal/config_rewrite": {
                 "#3143747: Avoid error on installation": "https://www.drupal.org/files/issues/2020-05-29/config_rewrite-avoid-error-on-installation-3143747.patch"
             },
-            "drupal/calendar": {
-                "Opigno adoptation": "https://www.drupal.org/files/issues/2021-09-10/calendar_opigno_adoptation-3232403-1.patch"
-            },
             "drupal/views_infinite_scroll": {
                 "Headers in table format repeat on load more instead of adding rows": "https://www.drupal.org/files/issues/2021-02-11/2899705-35.patch"
             },
@@ -133,11 +130,6 @@
             },
             "drupal/better_exposed_filters": {
                 "Textfield in auto-submit filter with Ajax should retain focus submitted": "https://www.drupal.org/files/issues/2020-09-16/3103626-12.patch"
-            },
-            "drupal/h5p": {
-                "H5P saving missing title not saving changes": "https://www.drupal.org/files/issues/2022-05-19/h5p-3281356-2.patch",
-                "3260094 - PHP 8.0 deprecated syntax warnings for h5p-editor": "https://www.drupal.org/files/issues/2023-02-06/h5p-php8-deprecation-warnings-3260094-27.patch",
-                "#3295255: H5P widget settings unclickable checkboxes": "https://www.drupal.org/files/issues/2022-07-11/3295255_2.patch"
             }
         }
     }
