@@ -1,0 +1,22 @@
+diff --git a/opigno_module.module b/opigno_module.module
+index 3219ece..cfb007b 100644
+--- a/opigno_module.module
++++ b/opigno_module.module
+@@ -857,7 +857,7 @@ function opigno_module_prepare_directory_structure_for_import() {
+ /**
+  * Implements hook_page_top().
+  */
+-function opigno_module_page_top(array &$page_top) {
++/*function opigno_module_page_top(array &$page_top) {
+   // Install h5p libraries.
+   $interface = H5PDrupal::getInstance();
+   if (empty($interface->loadLibraries())) {
+@@ -880,7 +880,7 @@ function opigno_module_page_top(array &$page_top) {
+       $storage->savePackage(NULL, NULL, TRUE);
+     }
+   };
+-}
++}*/
+ 
+ /**
+  * Function for loading all users by role.

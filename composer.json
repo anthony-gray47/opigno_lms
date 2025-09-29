@@ -139,6 +139,9 @@
             },
             "drupal/h5p": {
                 "#3295255: H5P widget settings unclickable checkboxes": "https://www.drupal.org/files/issues/2022-07-11/3295255_2.patch"
+            },
+            "drupal/opigno_module": {
+                "#3194353: Cannot load page": "./patches/dont-load-libraries.patch"
             }
         }
     }
