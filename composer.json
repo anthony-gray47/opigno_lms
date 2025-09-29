@@ -5,7 +5,7 @@
     "license": "GPL-2.0-or-later",
     "authors": [],
     "replace": {
-        "opigno/opigno_lms": "~3.2"
+        "opigno/opigno_lms": "*"
     },
     "require": {
         "drupal/core-recommended": "^10.2",
