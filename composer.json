@@ -1,10 +1,12 @@
 {
-    "name": "inner_peace/inner_peace_lms",
+    "name": "inner_peace/opigno_lms",
     "description": "Inner Peace - Opigno LMS profile",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
-    "replace": { "opigno/opigno_lms": "~3.2.0" },
     "authors": [],
+    "replace": {
+        "opigno/opigno_lms": "*"
+    },
     "require": {
         "drupal/core-recommended": "^10.2",
         "dompdf/dompdf": "~2.0.0",
@@ -98,6 +100,9 @@
         "drupal/aristotle": "~3.2.0"
     },
     "extra": {
+        "branch-alias": {
+            "dev-peace-3.2": "3.2.x-dev"
+        },
         "patches": {
             "drupal/core": {
                 "#2924061: Create views plugins for date range fields": "https://www.drupal.org/files/issues/2019-04-15/2924061-14.patch",
