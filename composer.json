@@ -100,9 +100,6 @@
         "drupal/aristotle": "~3.2.0"
     },
     "extra": {
-        "branch-alias": {
-            "dev-peace-3.2": "3.2.x-dev"
-        },
         "patches": {
             "drupal/core": {
                 "#2924061: Create views plugins for date range fields": "https://www.drupal.org/files/issues/2019-04-15/2924061-14.patch",
