@@ -1,9 +1,12 @@
 {
-    "name": "opigno/opigno_lms",
+    "name": "inner_peace/opigno_lms",
     "description": "Inner Peace - Opigno LMS profile",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
     "authors": [],
+    "replace": {
+        "opigno/opigno_lms": "~3.2"
+    },
     "require": {
         "drupal/core-recommended": "^10.2",
         "dompdf/dompdf": "~2.0.0",
