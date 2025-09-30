@@ -142,6 +142,9 @@
             },
             "drupal/opigno_module": {
                 "#3194353: Cannot load page": "./patches/dont-load-libraries.patch"
+            },
+            "drupal/opigno_learning_path": {
+                "#3483078: it is not possible to create an activity": "https://www.drupal.org/files/issues/2024-11-05/it-is-not-possible-to-create-an-activity-3483078.patch"
             }
         }
     }
