@@ -138,16 +138,14 @@
                 "Textfield in auto-submit filter with Ajax should retain focus submitted": "https://www.drupal.org/files/issues/2020-09-16/3103626-12.patch"
             },
             "drupal/h5p": {
-                "#3295255: H5P widget settings unclickable checkboxes": "https://www.drupal.org/files/issues/2022-07-11/3295255_2.patch"
+                "#3295255: H5P widget settings unclickable checkboxes": "https://www.drupal.org/files/issues/2022-07-11/3295255_2.patch",
+                "Fix PHP 8 deprecation issue": "https://www.drupal.org/files/issues/2025-07-09/h5p-3456909-fix-php83-deprecation-errors-01.patch"
             },
             "drupal/opigno_module": {
                 "#3194353: Cannot load page": "./patches/dont-load-libraries.patch"
             },
             "drupal/opigno_learning_path": {
                 "#3483078: it is not possible to create an activity": "https://www.drupal.org/files/issues/2024-11-05/it-is-not-possible-to-create-an-activity-3483078.patch"
-            },
-            "h5p/h5p-editor": {
-                "Fix PHP 8 deprecation issue": "https://www.drupal.org/files/issues/2025-07-09/h5p-3456909-fix-php83-deprecation-errors-01.patch"
             }
         }
     }
