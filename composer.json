@@ -145,6 +145,9 @@
             },
             "drupal/opigno_learning_path": {
                 "#3483078: it is not possible to create an activity": "https://www.drupal.org/files/issues/2024-11-05/it-is-not-possible-to-create-an-activity-3483078.patch"
+            },
+            "h5p/h5p-editor": {
+                "Fix PHP 8 deprecation issue": "https://www.drupal.org/files/issues/2025-07-09/h5p-3456909-fix-php83-deprecation-errors-01.patch"
             }
         }
     }
