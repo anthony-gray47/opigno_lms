@@ -20,12 +20,12 @@ opigno_lms.catalogue:
 #  weight: -8
 #  description: 'Private messages'
 
-opigno_lms.calendar:
-  title: Calendar
-  route_name: view.opigno_calendar.page_month
-  menu_name: 'main'
-  weight: -7
-  description: 'Calendar'
+#opigno_lms.calendar:
+#  title: Calendar
+#  route_name: view.opigno_calendar.page_month
+#  menu_name: 'main'
+#  weight: -7
+#  description: 'Calendar'
 
 #opigno_lms.achievements:
 #  title: Achievements
