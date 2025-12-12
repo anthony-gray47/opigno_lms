@@ -7,11 +7,11 @@ opigno_lms.home:
   description: 'Home'
 #
 opigno_lms.catalogue:
-  title: Catalogue
+  title: Catalog
   route_name: view.opigno_training_catalog.training_catalogue
   menu_name: 'main'
   weight: -9
-  description: 'Catalogue'
+  description: 'catalog'
 
 #opigno_lms.messages:
 #  title: Messages
