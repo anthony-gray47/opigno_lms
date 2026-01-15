@@ -145,6 +145,9 @@
             },
             "drupal/opigno_learning_path": {
                 "#3483078: it is not possible to create an activity": "https://www.drupal.org/files/issues/2024-11-05/it-is-not-possible-to-create-an-activity-3483078.patch"
+            },
+            "drupal/opigno_statistics:": {
+                "Updating it so everyone can see user statistics": "./patches/user-statistics.patch"
             }
         }
     }

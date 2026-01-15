@@ -1,0 +1,13 @@
+diff --git a/src/Controller/UserController.php b/src/Controller/UserController.php
+index ae0d306..edbab3b 100644
+--- a/src/Controller/UserController.php
++++ b/src/Controller/UserController.php
+@@ -321,7 +321,7 @@ class UserController extends ControllerBase {
+     }
+ 
+     // Minimal.
+-    $mode = 'minimal';
++    $mode = 'advanced';
+     return $mode;
+   }
+ 
