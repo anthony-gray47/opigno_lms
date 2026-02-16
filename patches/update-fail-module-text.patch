@@ -1,0 +1,34 @@
+diff --git a/src/Controller/LearningPathStepsController.php b/src/Controller/LearningPathStepsController.php
+index 48063ce..d70ac3d 100644
+--- a/src/Controller/LearningPathStepsController.php
++++ b/src/Controller/LearningPathStepsController.php
+@@ -1009,6 +1009,15 @@ class LearningPathStepsController extends ControllerBase {
+    *   The message.
+    */
+   protected function requiredStepMessage(string $name, ?int $required = NULL, string $link = ''): TranslatableMarkup {
++    $currentUrl = $_SERVER['REQUEST_URI'];
++    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
++    $host = $_SERVER['HTTP_HOST'];
++    $segments = explode('/', trim($currentUrl, '/'));
++
++    $basePath = '/' . $segments[0] . '/' . $segments[1];
++
++    $finalUrl = $scheme . '://' . $host . $basePath . '#content';
++
+     if (empty($required)) {
+       // The simple message.
+       return $this->t('A required step: %step should be done first.', [
+@@ -1017,10 +1026,11 @@ class LearningPathStepsController extends ControllerBase {
+     }
+     else {
+       if (!empty($link)) {
+-        return $this->t("You should first get a minimum score of %required to the step %step before going further. <a href=':link'>Try again.</a>", [
++        return $this->t("<strong>PLEASE READ</strong><br>You need to complete this module with a minimum score of %required to the step %step before going further. <a href=':link'>Revisit the Training Homepage</a>, scroll down to the failed module, and click the restart button.", [
+           '%step' => $name,
+           '%required' => $required,
+-          ':link' => $link,
++          ':link' => $finalUrl,
++          //':trainingHomepage' => $trainingHomepage
+         ]);
+       }
+       else {
