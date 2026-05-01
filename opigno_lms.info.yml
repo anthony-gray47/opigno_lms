@@ -12,7 +12,6 @@ dependencies:
   - breakpoint
   - calendar
   - calendar_datetime
-  - ckeditor
   - ckeditor5
   - ckeditor_bgimage
   - color
